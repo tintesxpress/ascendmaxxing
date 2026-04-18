@@ -1,0 +1,1232 @@
+[
+  {
+    "name": "Barbell Bench Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps", "shoulders"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Lie flat on the bench with feet on floor. Lower the bar to your mid-chest with control, then press it back up to lockout.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Incline Barbell Bench Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders", "triceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Set bench to 30-45 degree incline. Lower bar to upper chest, then press back up with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Decline Barbell Bench Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Set bench to decline position. Lower bar to lower chest area and press back up, targeting lower chest.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Bench Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps", "shoulders"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Lie on flat bench with dumbbells at shoulder height. Press dumbbells up and slightly inward until nearly locked out.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Incline Dumbbell Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders", "triceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Set bench to incline. Press dumbbells from shoulder height upward and inward with full control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Decline Dumbbell Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "On decline bench, press dumbbells from shoulder level upward, emphasizing lower chest contraction.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Flye",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Lie on bench with slight bend in elbows. Lower dumbbells out to sides in an arc, then bring them back together.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Incline Dumbbell Flye",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "On incline bench, perform fly motion with dumbbells, focusing on the upper chest contraction.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Crossover",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Stand between two cable stacks, grab handles, and pull cables across your body with a controlled arc motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Chest Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps", "shoulders"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Sit upright, grip handles at shoulder height, and press straight ahead until nearly extended.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Chest Dip",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps", "shoulders"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "Lean forward on dip bars to emphasize chest. Lower body until elbows reach 90 degrees, then press back up.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Push-Up",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps", "shoulders"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "Lower your body until chest nearly touches the floor, keeping elbows at 45-degree angle. Push back to start.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Incline Push-Up",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders", "triceps"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "Perform push-ups with hands elevated on a bench to reduce resistance and focus on form.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Decline Push-Up",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders", "triceps"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "With feet elevated, perform push-ups to increase resistance and target upper chest.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Pull-Up",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "Grip bar with hands shoulder-width apart. Pull body upward until chin clears the bar, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Lat Pulldown",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "cable",
+    "category": "compound",
+    "instructions": "Sit at machine, grip bar wide, and pull down to upper chest. Control the weight as it returns.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Hinge at hips with slight knee bend. Row barbell to lower chest, squeeze shoulder blades, and control descent.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Underhand Barbell Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Row barbell with underhand grip to place more emphasis on the lats and biceps.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Hinge at hips, row dumbbell to ribs with one arm, keeping core engaged. Alternate arms.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Single-Arm Dumbbell Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Support yourself on a bench, row dumbbell to your ribs with full range of motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "cable",
+    "category": "compound",
+    "instructions": "Sit upright at cable machine, grab handle, and row toward your body with controlled motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Seated Cable Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "cable",
+    "category": "compound",
+    "instructions": "Sit on machine, chest up, and pull cable handles to your torso, squeezing shoulder blades together.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "T-Bar Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Load one end of a barbell into a landmine or corner. Row the weighted end to your chest with explosive power.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Face Pull",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using rope attachment, pull cable toward your face, separating the rope ends and pulling elbows back.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Reverse Machine Flye",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit upright on machine, grab handles, and pull them backward in a fly motion to work rear delts and back.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Overhead Press",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Press barbell from shoulders straight overhead to lockout. Keep core tight and avoid excessive arch.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Shoulder Press",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Press dumbbells from shoulder height overhead, maintaining a neutral wrist position.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Shoulder Press",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Sit upright on machine and press handles overhead to full extension.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Lateral Raise",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Stand upright, raise dumbbells out to sides to shoulder height with slight elbow bend, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Lateral Raise",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley, raise single cable handle out to side to shoulder height and control descent.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Front Raise",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Raise dumbbells in front of body from hips to shoulder height, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Plate Front Raise",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": [],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Hold weight plate at chest level and raise overhead, targeting front delts.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Reverse Flye",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["back"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Bend at hips, raise dumbbells out to sides with slight elbow bend to target rear delts.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Upright Row",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["traps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Hold barbell at waist, pull it upward along your body, keeping elbows high until bar reaches chest level.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Upright Row",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["traps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Pull dumbbells upward along the sides of your body, focusing on elbow drive.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Arnold Press",
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Press dumbbells from shoulder height with a twist, rotating palms from facing you to facing away at the top.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Hold barbell at waist, curl it toward chest, squeeze at top, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Curl dumbbells toward shoulders, maintaining control throughout the full range of motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Hammer Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hold dumbbells with neutral grip (palms facing each other) and curl toward shoulders.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Preacher Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Sit at preacher bench, rest upper arms on pad, and curl bar toward forehead.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Preacher Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Perform curl motion on preacher bench with dumbbells for one-arm isolation.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Incline Dumbbell Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Sit on incline bench, let dumbbells hang, and curl upward with full stretch at bottom.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Concentration Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Sit upright, brace elbow against inner thigh, and curl dumbbell toward shoulder.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley, curl cable handle toward chest, maintaining constant tension throughout.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Curl",
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit on machine, grip handles, and curl toward shoulders with controlled motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Skull Crusher",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": ["chest"],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Lie on bench, hold bar overhead, lower to forehead by bending elbows, then press back up.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Skull Crusher",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": ["chest"],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Lie on bench, hold dumbbells overhead, and lower them behind your head by bending elbows.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "EZ Bar Skull Crusher",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": ["chest"],
+    "equipment": "ez_bar",
+    "category": "isolation",
+    "instructions": "Use EZ bar for skull crusher to reduce wrist strain while performing the overhead extension.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Overhead Tricep Extension",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hold dumbbell overhead with both hands, lower behind head by bending elbows, then press back up.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Overhead Extension",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using high pulley with rope attachment, press cable downward from behind your head.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Tricep Pushdown",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using rope or bar attachment at high pulley, push cable downward in front of body, fully extending arms.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Reverse Grip Pushdown",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Use underhand grip on cable pushdown to target medial head of triceps.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Close-Grip Bench Press",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": ["chest"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Press barbell with hands closer than shoulder-width to emphasize triceps involvement.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Tricep Dip",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": ["chest"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "Keep body upright on dips, lower body by bending elbows, then press back up to emphasize triceps.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Assisted Tricep Dip",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": ["chest"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Use assistance machine to perform dips with reduced body weight for tricep development.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Tricep Kickback",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hinge at hips, keep upper arm stationary, extend dumbbell backward by straightening your arm.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Kickback",
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley, extend arm backward against resistance, keeping upper arm still.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Back Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Place bar on upper back, descend until thighs reach parallel, then drive through heels to stand.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Front Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Hold bar across front delts, squat down until thighs are parallel, keeping chest upright.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Leg Press",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Sit on machine, push platform away by extending legs, control descent, and avoid locking knees.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Leg Extension",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit upright, place feet under pads, and extend legs forward against resistance until straight.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Hack Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Position back against pad on hack squat machine, squat down until thighs reach parallel.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Lunge",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Step forward, lower hips until back knee nearly touches floor, then drive back to start.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Lunge",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Hold dumbbells at sides, lunge forward, lower hips, and return to start position.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Place rear foot on bench behind you, step forward and squat until front thigh is parallel.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Goblet Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Hold dumbbell at chest, squat down with elbows inside knees, keeping chest upright.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Sissy Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Lean back while bending knees, using a support for balance, to heavily load the quadriceps.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Smith Machine Squat",
+    "primaryMuscle": "quadriceps",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "smith_machine",
+    "category": "compound",
+    "instructions": "Using Smith machine bar, squat down until thighs reach parallel, maintaining upright posture.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Romanian Deadlift",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": ["glutes", "back"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Hold bar at waist, hinge at hips with slight knee bend, lower bar along legs until feeling stretch.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Romanian Deadlift",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": ["glutes", "back"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Hold dumbbells at sides, hinge at hips and lower weights down the front of legs.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Leg Curl",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Lie face down on machine, curl your legs upward, squeeze hamstrings at top, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Seated Leg Curl",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit upright on machine, place feet under pads, and curl legs downward against resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Nordic Curl",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Kneel on floor, slowly lower body forward, resisting the fall with hamstrings, then drive back up.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Good Morning",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": ["glutes", "back"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Place bar on shoulders, hinge at hips with slight bend, lower torso until feeling stretch, then stand.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Stiff-Leg Deadlift",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": ["glutes", "back"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Stand with minimal knee bend, lower barbell while hinging at hips until feeling hamstring stretch.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Curl Hamstring",
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley and ankle attachment, curl one leg upward against cable resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Hip Thrust",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["hamstrings"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Sit with back against bench, place bar across hips, drive hips upward, squeeze glutes at top.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Hip Thrust",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["hamstrings"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Perform hip thrust holding dumbbells across hips for added resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Hip Thrust",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["hamstrings"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Sit on hip thrust machine, press footplate away to drive hips upward and engage glutes.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Glute Bridge",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["hamstrings"],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "instructions": "Lie on back with knees bent, drive hips upward, squeeze glutes at the top position.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Single-Leg Glute Bridge",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["hamstrings"],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Perform glute bridge with one leg extended to increase intensity and isolate each glute.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Kickback",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley with ankle attachment, kick one leg backward against cable resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Sumo Deadlift",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["quadriceps", "hamstrings"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Stand wide, toes out, deadlift bar keeping chest upright to emphasize glute activation.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Glute Abduction",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit on machine, push legs outward against resistance to target outer glutes and abductors.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Standing Calf Raise",
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Stand on machine, place feet on platform, and raise up on toes by extending ankles.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Calf Raise",
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Hold barbell on shoulders, raise up on toes, squeeze calves at top, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Calf Raise",
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hold dumbbells at sides, raise up on toes, and lower with controlled motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Seated Calf Raise",
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit on machine with feet on platform, press up onto toes against resistance, focusing on lower calf.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Smith Machine Calf Raise",
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "smith_machine",
+    "category": "isolation",
+    "instructions": "Use Smith machine for calf raises, standing with feet on platform.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Calf Raise",
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley, stand and raise onto toes against cable resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Crunch",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Lie on back with knees bent, curl your torso upward toward knees, squeeze abs at top.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Crunch",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit on machine, grip handles, and perform crunching motion against resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Crunch",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using high pulley with rope attachment, crunch forward by flexing your abs against resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Hanging Leg Raise",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Hang from bar, raise legs up to form 90-degree angle at hips, lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Seated Leg Raise",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Sit on bench or chair, pull knees toward chest, then extend legs back out.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Ab Wheel Rollout",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": ["back"],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Kneel with wheel in hands, roll forward, extend your body, then pull back using your abs.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Decline Situp",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Lie on decline bench, curl torso up toward knees against gravity and body weight.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Plank",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": ["back"],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Support body on forearms and toes, keep body straight, hold position while engaging core.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Side Plank",
+    "primaryMuscle": "abs",
+    "secondaryMuscles": [],
+    "equipment": "bodyweight",
+    "category": "isolation",
+    "instructions": "Support body on one forearm and feet, keep body in straight line, hold without rotating.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Shrug",
+    "primaryMuscle": "traps",
+    "secondaryMuscles": [],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Hold barbell at waist, raise shoulders toward ears, squeeze traps at top, then lower.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Shrug",
+    "primaryMuscle": "traps",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hold dumbbells at sides, shrug shoulders upward, squeeze traps, then lower with control.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Shrug",
+    "primaryMuscle": "traps",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit on machine, grip handles, and shrug shoulders upward against resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Smith Machine Shrug",
+    "primaryMuscle": "traps",
+    "secondaryMuscles": [],
+    "equipment": "smith_machine",
+    "category": "isolation",
+    "instructions": "Using Smith machine bar, perform shrugs with controlled range of motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Rack Pull",
+    "primaryMuscle": "traps",
+    "secondaryMuscles": ["back"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Deadlift bar from elevated position (pins set at mid-shin), focusing on upper back and traps.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Wrist Curl",
+    "primaryMuscle": "forearms",
+    "secondaryMuscles": [],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Hold barbell with underhand grip, rest forearms on bench, and curl bar by flexing wrists upward.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Wrist Curl",
+    "primaryMuscle": "forearms",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hold dumbbells with underhand grip, rest forearms on bench, and curl upward using wrist flexion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Reverse Wrist Curl",
+    "primaryMuscle": "forearms",
+    "secondaryMuscles": [],
+    "equipment": "barbell",
+    "category": "isolation",
+    "instructions": "Hold barbell with overhand grip, rest forearms on bench, and extend bar upward using wrist extension.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Reverse Wrist Curl",
+    "primaryMuscle": "forearms",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "instructions": "Hold dumbbells with overhand grip on bench, extend upward by extending wrists.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Wrist Curl",
+    "primaryMuscle": "forearms",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using low pulley with handle, perform wrist curls against cable resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Farmer's Carry",
+    "primaryMuscle": "forearms",
+    "secondaryMuscles": ["traps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Hold heavy dumbbells at sides and walk forward, maintaining upright posture.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Barbell Deadlift",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["glutes", "hamstrings", "quadriceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Stand over bar, grip it, keep chest up and back straight, drive through heels to lift.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Trap Bar Deadlift",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["glutes", "hamstrings", "quadriceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Using trap bar, stand inside handles, grip them, and deadlift with neutral spine and vertical shin.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Conventional Deadlift",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["glutes", "hamstrings"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Standard deadlift with conventional stance, focus on engaging lats and maintaining neutral spine.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Sumo Deadlift High",
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": ["quadriceps", "hamstrings"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Wide stance deadlift variation emphasizing glute and quad activation.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Band Pull-Apart",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "band",
+    "category": "isolation",
+    "instructions": "Hold resistance band at chest level, pull apart by moving hands outward, keeping arms straight.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Chest-Supported Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "Using inclined bench, row barbell to chest with support, reducing lower back strain.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Meadows Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "barbell",
+    "category": "compound",
+    "instructions": "With bar in landmine, stand perpendicular, row weight toward hip with explosive motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Row",
+    "primaryMuscle": "back",
+    "secondaryMuscles": ["biceps"],
+    "equipment": "machine",
+    "category": "compound",
+    "instructions": "Sit on machine, grab handles, and pull toward your torso with controlled motion.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Band Resisted Dip",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "band",
+    "category": "compound",
+    "instructions": "Perform dips with band assistance by looping band over dip bars and under your legs.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Resistance Band Chest Fly",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "band",
+    "category": "isolation",
+    "instructions": "Attach bands to posts at shoulder height, step forward, and perform fly motion against resistance.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Cable Machine Fly",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["shoulders"],
+    "equipment": "cable",
+    "category": "isolation",
+    "instructions": "Using adjacent cable stacks, perform fly motion by pulling handles together across body.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Dumbbell Squeeze Press",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": ["triceps"],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "instructions": "Press dumbbells together at chest level, maintaining pressure between them throughout.",
+    "isCustom": false,
+    "gifUrl": null
+  },
+  {
+    "name": "Machine Pec Deck",
+    "primaryMuscle": "chest",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "instructions": "Sit on machine, place arms on pads, and pull handles together in front of chest.",
+    "isCustom": false,
+    "gifUrl": null
+  }
+]

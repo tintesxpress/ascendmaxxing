@@ -1,0 +1,194 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Exercise Database ───────────────────────────────────────────
+model Exercise {
+  id               String   @id @default(cuid())
+  name             String
+  primaryMuscle    String   @map("primary_muscle")
+  secondaryMuscles String[] @map("secondary_muscles")
+  equipment        String?
+  category         String?
+  instructions     String?  @db.Text
+  gifUrl           String?  @map("gif_url")
+  isCustom         Boolean  @default(false) @map("is_custom")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  templateExercises TemplateExercise[]
+  sets              Set[]
+
+  @@unique([name])
+  @@map("exercises")
+}
+
+// ─── Template Organization ───────────────────────────────────────
+model Folder {
+  id        String     @id @default(cuid())
+  name      String
+  position  Int        @default(0)
+  createdAt DateTime   @default(now()) @map("created_at")
+  templates Template[]
+
+  @@map("folders")
+}
+
+model Template {
+  id        String             @id @default(cuid())
+  folderId  String             @map("folder_id")
+  name      String
+  position  Int                @default(0)
+  createdAt DateTime           @default(now()) @map("created_at")
+  folder    Folder             @relation(fields: [folderId], references: [id], onDelete: Cascade)
+  exercises TemplateExercise[]
+  workouts  Workout[]
+
+  @@map("templates")
+}
+
+model TemplateExercise {
+  id         String   @id @default(cuid())
+  templateId String   @map("template_id")
+  exerciseId String   @map("exercise_id")
+  targetSets Int      @default(3) @map("target_sets")
+  position   Int      @default(0)
+  template   Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@map("template_exercises")
+}
+
+// ─── Workout Sessions ────────────────────────────────────────────
+model Workout {
+  id              String    @id @default(cuid())
+  templateId      String?   @map("template_id")
+  date            DateTime  @default(now())
+  startTime       DateTime  @map("start_time")
+  endTime         DateTime? @map("end_time")
+  durationSeconds Int?      @map("duration_seconds")
+  notes           String?   @db.Text
+  template        Template? @relation(fields: [templateId], references: [id])
+  sets            Set[]
+
+  @@map("workouts")
+}
+
+enum SetType {
+  strength
+  hypertrophy_heavy
+  hypertrophy_moderate
+  endurance
+}
+
+model Set {
+  id          String   @id @default(cuid())
+  workoutId   String   @map("workout_id")
+  exerciseId  String   @map("exercise_id")
+  setNumber   Int      @map("set_number")
+  weight      Float
+  reps        Int
+  rir         Int?
+  setType     SetType  @map("set_type")
+  restSeconds Int?     @map("rest_seconds")
+  createdAt   DateTime @default(now()) @map("created_at")
+  workout     Workout  @relation(fields: [workoutId], references: [id], onDelete: Cascade)
+  exercise    Exercise @relation(fields: [exerciseId], references: [id])
+
+  @@map("sets")
+}
+
+// ─── Nutrition ───────────────────────────────────────────────────
+model Food {
+  id                 String   @id @default(cuid())
+  name               String
+  servingSizeG       Float    @map("serving_size_g")
+  caloriesPerServing Float    @map("calories_per_serving")
+  proteinG           Float    @map("protein_g")
+  carbsG             Float    @map("carbs_g")
+  fatG               Float    @map("fat_g")
+  barcode            String?
+  isCustom           Boolean  @default(true) @map("is_custom")
+  createdAt          DateTime @default(now()) @map("created_at")
+  meals              Meal[]
+
+  @@map("foods")
+}
+
+enum MealType {
+  breakfast
+  lunch
+  dinner
+  snack
+}
+
+model Meal {
+  id            String   @id @default(cuid())
+  date          DateTime @db.Date
+  mealType      MealType @map("meal_type")
+  foodId        String   @map("food_id")
+  servings      Float    @default(1)
+  totalCalories Float    @map("total_calories")
+  totalProtein  Float    @map("total_protein")
+  totalCarbs    Float    @map("total_carbs")
+  totalFat      Float    @map("total_fat")
+  createdAt     DateTime @default(now()) @map("created_at")
+  food          Food     @relation(fields: [foodId], references: [id])
+
+  @@map("meals")
+}
+
+// ─── Recovery ────────────────────────────────────────────────────
+model SleepLog {
+  id            String   @id @default(cuid())
+  date          DateTime @db.Date
+  bedtime       DateTime
+  wakeTime      DateTime @map("wake_time")
+  durationHours Float    @map("duration_hours")
+  quality       Int      // 1-5
+  source        String   @default("manual") // 'manual' or 'whoop' in Phase 2
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("sleep_logs")
+}
+
+model BodyWeightLog {
+  id        String   @id @default(cuid())
+  date      DateTime @db.Date
+  weight    Float    // in lbs
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("body_weight_logs")
+}
+
+// Phase 2: WHOOP data — table exists but empty for now
+model RecoveryLog {
+  id                   String   @id @default(cuid())
+  date                 DateTime @db.Date
+  whoopRecoveryScore   Float?   @map("whoop_recovery_score")
+  whoopHrvMs           Float?   @map("whoop_hrv_ms")
+  whoopRhrBpm          Float?   @map("whoop_rhr_bpm")
+  whoopStrain          Float?   @map("whoop_strain")
+  createdAt            DateTime @default(now()) @map("created_at")
+
+  @@map("recovery_logs")
+}
+
+// ─── Settings ────────────────────────────────────────────────────
+model Settings {
+  id                 String   @id @default("default")
+  dailyCalorieTarget Int      @default(2800) @map("daily_calorie_target")
+  dailyProteinTarget Int      @default(180) @map("daily_protein_target")
+  dailyCarbTarget    Int      @default(350) @map("daily_carb_target")
+  dailyFatTarget     Int      @default(70) @map("daily_fat_target")
+  bodyweightLbs      Float?   @map("bodyweight_lbs")
+  heightCm           Float?   @map("height_cm")
+  sleepGoalHours     Float    @default(8) @map("sleep_goal_hours")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  @@map("settings")
+}

@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #fafafa;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input[inputmode="decimal"],
+input[inputmode="numeric"] {
+  font-size: 16px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
