@@ -80,7 +80,8 @@ export default function TemplateDetail({ params }: { params: Promise<{ templateI
     try {
       const res = await fetch(`/api/exercises?q=${encodeURIComponent(searchQuery)}`);
       if (res.ok) {
-        setSearchResults(await res.json());
+        const data = await res.json();
+        setSearchResults(data.exercises || []);
       }
     } catch (error) {
       console.error("Failed to search exercises:", error);
