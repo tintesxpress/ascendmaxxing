@@ -10,15 +10,49 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'date query param is required' }, { status: 400 })
     }
 
-    const date = new Date(dateStr + 'T00:00:00')
+    let date: Date
+    if (dateStr === 'today') {
+      date = new Date()
+      date.setHours(0, 0, 0, 0)
+    } else {
+      date = new Date(dateStr + 'T00:00:00')
+    }
+
+    const nextDay = new Date(date)
+    nextDay.setDate(nextDay.getDate() + 1)
 
     const meals = await prisma.meal.findMany({
-      where: { date },
+      where: {
+        date: {
+          gte: date,
+          lt: nextDay,
+        },
+      },
       include: { food: true },
       orderBy: { createdAt: 'asc' },
     })
 
-    return NextResponse.json(meals)
+    const settings = await prisma.settings.findUnique({
+      where: { id: 'default' },
+    })
+
+    const totals = {
+      calories: meals.reduce((sum, m) => sum + m.totalCalories, 0),
+      protein: meals.reduce((sum, m) => sum + m.totalProtein, 0),
+      carbs: meals.reduce((sum, m) => sum + m.totalCarbs, 0),
+      fat: meals.reduce((sum, m) => sum + m.totalFat, 0),
+    }
+
+    return NextResponse.json({
+      meals,
+      targets: {
+        calories: settings?.dailyCalorieTarget ?? 2800,
+        protein: settings?.dailyProteinTarget ?? 180,
+        carbs: settings?.dailyCarbTarget ?? 350,
+        fat: settings?.dailyFatTarget ?? 70,
+      },
+      totals,
+    })
   } catch (error) {
     console.error('Error fetching meals:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
