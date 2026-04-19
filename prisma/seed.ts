@@ -23,10 +23,20 @@ interface ExerciseData {
   gifUrl: string | null
 }
 
+interface FoodData {
+  name: string
+  servingSizeG: number
+  caloriesPerServing: number
+  proteinG: number
+  carbsG: number
+  fatG: number
+}
+
 async function main() {
   try {
     console.log('Starting seed process...')
 
+    // Seed exercises
     const exercisesPath = path.join(__dirname, 'exercises.json')
     const exercisesData: ExerciseData[] = JSON.parse(
       fs.readFileSync(exercisesPath, 'utf-8')
@@ -65,9 +75,42 @@ async function main() {
         console.error(`Failed to upsert exercise "${exercise.name}":`, error)
       }
     }
-
     console.log(`Successfully upserted ${successCount}/${exercisesData.length} exercises`)
 
+    // Seed foods
+    const foodsPath = path.join(__dirname, 'foods.json')
+    if (fs.existsSync(foodsPath)) {
+      const foodsData: FoodData[] = JSON.parse(
+        fs.readFileSync(foodsPath, 'utf-8')
+      )
+      console.log(`Loaded ${foodsData.length} foods from foods.json`)
+
+      let foodCount = 0
+      for (const food of foodsData) {
+        try {
+          const existing = await prisma.food.findFirst({ where: { name: food.name } })
+          if (!existing) {
+            await prisma.food.create({
+              data: {
+                name: food.name,
+                servingSizeG: food.servingSizeG,
+                caloriesPerServing: food.caloriesPerServing,
+                proteinG: food.proteinG,
+                carbsG: food.carbsG,
+                fatG: food.fatG,
+                isCustom: false,
+              },
+            })
+          }
+          foodCount++
+        } catch (error) {
+          console.error(`Failed to seed food "${food.name}":`, error)
+        }
+      }
+      console.log(`Successfully seeded ${foodCount}/${foodsData.length} foods`)
+    }
+
+    // Create default settings
     console.log('Creating default Settings if needed...')
     const existingSettings = await prisma.settings.findUnique({
       where: { id: 'default' },
