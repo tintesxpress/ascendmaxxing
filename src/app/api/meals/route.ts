@@ -64,9 +64,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { date, mealType, foodId, servings = 1 } = body
 
-    if (!date || !mealType || !foodId) {
+    if (!mealType || !foodId) {
       return NextResponse.json(
-        { error: 'date, mealType, and foodId are required' },
+        { error: 'mealType and foodId are required' },
         { status: 400 }
       )
     }
@@ -76,7 +76,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Food not found' }, { status: 404 })
     }
 
-    const mealDate = new Date(date + 'T00:00:00')
+    let mealDate: Date
+    if (!date || date === 'today') {
+      mealDate = new Date()
+      mealDate.setHours(0, 0, 0, 0)
+    } else {
+      mealDate = new Date(date + 'T00:00:00')
+    }
     const totalCalories = food.caloriesPerServing * servings
     const totalProtein = food.proteinG * servings
     const totalCarbs = food.carbsG * servings
