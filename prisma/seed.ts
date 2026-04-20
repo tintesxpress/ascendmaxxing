@@ -42,7 +42,7 @@ async function main() {
       fs.readFileSync(exercisesPath, 'utf-8')
     )
 
-    console.log(`Loaded ${exercisesData.length} exercises from exercises.json`)
+    console.log('Loaded ' + exercisesData.length + ' exercises from exercises.json')
     console.log('Upserting exercises into database...')
 
     let successCount = 0
@@ -72,24 +72,35 @@ async function main() {
         })
         successCount++
       } catch (error) {
-        console.error(`Failed to upsert exercise "${exercise.name}":`, error)
+        console.error('Failed to upsert exercise "' + exercise.name + '":', error)
       }
     }
-    console.log(`Successfully upserted ${successCount}/${exercisesData.length} exercises`)
+    console.log('Successfully upserted ' + successCount + '/' + exercisesData.length + ' exercises')
 
-    // Seed foods
+    // Seed foods - upsert to update existing entries with USDA-accurate values
     const foodsPath = path.join(__dirname, 'foods.json')
     if (fs.existsSync(foodsPath)) {
       const foodsData: FoodData[] = JSON.parse(
         fs.readFileSync(foodsPath, 'utf-8')
       )
-      console.log(`Loaded ${foodsData.length} foods from foods.json`)
+      console.log('Loaded ' + foodsData.length + ' foods from foods.json')
 
       let foodCount = 0
       for (const food of foodsData) {
         try {
           const existing = await prisma.food.findFirst({ where: { name: food.name } })
-          if (!existing) {
+          if (existing) {
+            await prisma.food.update({
+              where: { id: existing.id },
+              data: {
+                servingSizeG: food.servingSizeG,
+                caloriesPerServing: food.caloriesPerServing,
+                proteinG: food.proteinG,
+                carbsG: food.carbsG,
+                fatG: food.fatG,
+              },
+            })
+          } else {
             await prisma.food.create({
               data: {
                 name: food.name,
@@ -104,10 +115,10 @@ async function main() {
           }
           foodCount++
         } catch (error) {
-          console.error(`Failed to seed food "${food.name}":`, error)
+          console.error('Failed to seed food "' + food.name + '":', error)
         }
       }
-      console.log(`Successfully seeded ${foodCount}/${foodsData.length} foods`)
+      console.log('Successfully seeded ' + foodCount + '/' + foodsData.length + ' foods')
     }
 
     // Create default settings
