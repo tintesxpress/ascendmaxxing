@@ -5,6 +5,7 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
     const dateStr = searchParams.get('date')
+    const limitStr = searchParams.get('limit')
 
     const where: any = {}
     if (dateStr) {
@@ -18,6 +19,8 @@ export async function GET(request: NextRequest) {
       }
     }
 
+    // Only include workouts that have been finished (have durationSeconds)
+    // or filter all if no limit
     const workouts = await prisma.workout.findMany({
       where,
       include: {
@@ -28,6 +31,7 @@ export async function GET(request: NextRequest) {
         },
       },
       orderBy: { startTime: 'desc' },
+      ...(limitStr ? { take: parseInt(limitStr) } : {}),
     })
 
     return NextResponse.json(workouts)
