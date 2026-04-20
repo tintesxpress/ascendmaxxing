@@ -7,16 +7,16 @@ import { cn } from "@/lib/utils";
 const tabs = [
   { href: "/", label: "Home", icon: "H" },
   { href: "/train", label: "Train", icon: "T" },
+  { href: "/history", label: "History", icon: "⏱" },
   { href: "/eat", label: "Eat", icon: "E" },
   { href: "/recover", label: "Recover", icon: "R" },
-  { href: "/settings", label: "Settings", icon: "S" },
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
 
   // Hide nav during active workout
-  if (pathname.startsWith("/workout/")) return null;
+  if (pathname.startsWith("/workout/") && !pathname.includes("/summary")) return null;
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-800 z-50">
