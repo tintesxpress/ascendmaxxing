@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { use } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface SetData {
   id: string;
@@ -272,7 +273,7 @@ export default function WorkoutPage({ params }: { params: Promise<{ id: string }
               <div key={we.exercise.id} className="border-b border-zinc-800">
                 {/* Exercise Name */}
                 <div className="px-4 pt-4 pb-2">
-                  <h3 className="text-blue-400 font-bold text-sm">{we.exercise.name}</h3>
+                  <Link href={"/exercises/" + we.exercise.id} className="text-blue-400 font-bold text-sm hover:underline">{we.exercise.name}</Link>
                 </div>
 
                 {/* Set Table Header */}
