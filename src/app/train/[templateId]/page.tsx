@@ -45,9 +45,19 @@ export default function TemplateDetail({ params }: { params: Promise<{ templateI
   const [searching, setSearching] = useState(false);
   const searchTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
+  // Create exercise form
+  const [showCreateExercise, setShowCreateExercise] = useState(false);
+  const [newExName, setNewExName] = useState("");
+  const [newExMuscle, setNewExMuscle] = useState("chest");
+  const [newExEquipment, setNewExEquipment] = useState("barbell");
+  const [creating, setCreating] = useState(false);
+
   // Delete confirmation
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [starting, setStarting] = useState(false);
+
+  const muscleGroups = ["chest", "back", "shoulders", "biceps", "triceps", "forearms", "quadriceps", "hamstrings", "glutes", "calves", "abs", "cardio"];
+  const equipmentTypes = ["barbell", "dumbbell", "machine", "cable", "bodyweight", "band", "kettlebell", "other"];
 
   useEffect(() => { fetchTemplate(); }, [templateId]);
 
@@ -145,6 +155,31 @@ export default function TemplateDetail({ params }: { params: Promise<{ templateI
         }),
       });
     } catch (e) { console.error(e); }
+  }
+
+  async function createExercise() {
+    if (!newExName.trim()) return;
+    setCreating(true);
+    try {
+      const res = await fetch("/api/exercises", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: newExName.trim(),
+          primaryMuscle: newExMuscle,
+          equipment: newExEquipment,
+          category: "strength",
+        }),
+      });
+      if (res.ok) {
+        const exercise = await res.json();
+        setShowCreateExercise(false);
+        setNewExName("");
+        // Add to template immediately
+        addExercise(exercise.id);
+      }
+    } catch (e) { console.error(e); }
+    setCreating(false);
   }
 
   async function deleteTemplate() {
@@ -328,13 +363,13 @@ export default function TemplateDetail({ params }: { params: Promise<{ templateI
       )}
 
       {/* Add Exercise Modal */}
-      {showAddExercise && (
+      {showAddExercise && !showCreateExercise && (
         <div className="fixed inset-0 bg-black/80 z-50 flex flex-col">
           <div className="bg-zinc-900 flex-1 flex flex-col">
             <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800">
-              <button onClick={() => { setShowAddExercise(false); setExerciseSearch(""); setSearchResults([]); }} className="text-zinc-400 text-sm">Cancel</button>
+              <button onClick={() => { setShowAddExercise(false); setExerciseSearch(""); setSearchResults([]); }} className="text-blue-400 text-sm font-medium">Cancel</button>
               <h3 className="text-white font-bold text-sm">Add Exercise</h3>
-              <div className="w-12" />
+              <button onClick={() => setShowCreateExercise(true)} className="text-blue-400 text-sm font-medium">Create</button>
             </div>
             <div className="px-4 py-3">
               <input
@@ -365,6 +400,63 @@ export default function TemplateDetail({ params }: { params: Promise<{ templateI
               {exerciseSearch && !searching && searchResults.length === 0 && (
                 <p className="text-zinc-500 text-sm text-center py-8">No exercises found</p>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Create Exercise Modal */}
+      {showCreateExercise && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex flex-col">
+          <div className="bg-zinc-900 flex-1 flex flex-col">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800">
+              <button onClick={() => setShowCreateExercise(false)} className="text-blue-400 text-sm font-medium">Back</button>
+              <h3 className="text-white font-bold text-sm">Create Exercise</h3>
+              <div className="w-10" />
+            </div>
+            <div className="p-4 space-y-4">
+              <div>
+                <label className="text-zinc-400 text-xs font-semibold uppercase tracking-wider block mb-1">Exercise Name</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Incline Dumbbell Press"
+                  value={newExName}
+                  onChange={(e) => setNewExName(e.target.value)}
+                  autoFocus
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
+                />
+              </div>
+              <div>
+                <label className="text-zinc-400 text-xs font-semibold uppercase tracking-wider block mb-1">Primary Muscle</label>
+                <select
+                  value={newExMuscle}
+                  onChange={(e) => setNewExMuscle(e.target.value)}
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"
+                >
+                  {muscleGroups.map(m => (
+                    <option key={m} value={m}>{m.charAt(0).toUpperCase() + m.slice(1)}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="text-zinc-400 text-xs font-semibold uppercase tracking-wider block mb-1">Equipment</label>
+                <select
+                  value={newExEquipment}
+                  onChange={(e) => setNewExEquipment(e.target.value)}
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"
+                >
+                  {equipmentTypes.map(e => (
+                    <option key={e} value={e}>{e.charAt(0).toUpperCase() + e.slice(1)}</option>
+                  ))}
+                </select>
+              </div>
+              <button
+                onClick={createExercise}
+                disabled={!newExName.trim() || creating}
+                className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-xl py-3 font-bold text-sm transition-colors disabled:opacity-50"
+              >
+                {creating ? "Creating..." : "Create & Add to Routine"}
+              </button>
             </div>
           </div>
         </div>
