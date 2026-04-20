@@ -63,7 +63,7 @@ export default function WorkoutPage({ params }: { params: Promise<{ id: string }
   // Cancel confirmation
   const [showFinishConfirm, setShowFinishConfirm] = useState(false);
 
-  const searchTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const searchTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => { fetchWorkout(); }, [id]);
 
