@@ -10,10 +10,15 @@ interface TemplateExercise {
   targetSets: number;
 }
 
+interface TemplateWorkout {
+  date: string;
+}
+
 interface Template {
   id: string;
   name: string;
   exercises?: TemplateExercise[];
+  workouts?: TemplateWorkout[];
 }
 
 interface Folder {
@@ -22,26 +27,18 @@ interface Folder {
   templates: Template[];
 }
 
-interface RecentWorkout {
-  id: string;
-  date: string;
-  durationSeconds?: number;
-  template?: { name: string };
-  sets: { exerciseId: string; exercise?: { name: string } }[];
-}
-
 export default function TrainPage() {
   const router = useRouter();
   const [folders, setFolders] = useState<Folder[]>([]);
-  const [recentWorkouts, setRecentWorkouts] = useState<RecentWorkout[]>([]);
   const [loading, setLoading] = useState(true);
-  const [expandedFolder, setExpandedFolder] = useState<string | null>(null);
   const [showNewFolder, setShowNewFolder] = useState(false);
   const [newFolderName, setNewFolderName] = useState("");
-  const [starting, setStarting] = useState(false);
+  const [starting, setStarting] = useState<string | null>(null);
+  const [showNewRoutine, setShowNewRoutine] = useState<string | null>(null);
+  const [newRoutineName, setNewRoutineName] = useState("");
 
   useEffect(() => {
-    Promise.all([fetchFolders(), fetchRecentWorkouts()]).finally(() => setLoading(false));
+    fetchFolders().finally(() => setLoading(false));
   }, []);
 
   async function fetchFolders() {
@@ -51,18 +48,8 @@ export default function TrainPage() {
     } catch (e) { console.error(e); }
   }
 
-  async function fetchRecentWorkouts() {
-    try {
-      const res = await fetch("/api/workouts?limit=5");
-      if (res.ok) {
-        const data = await res.json();
-        setRecentWorkouts(Array.isArray(data) ? data : []);
-      }
-    } catch (e) { console.error(e); }
-  }
-
   async function startEmptyWorkout() {
-    setStarting(true);
+    setStarting("empty");
     try {
       const res = await fetch("/api/workouts", {
         method: "POST",
@@ -74,11 +61,11 @@ export default function TrainPage() {
         router.push("/workout/" + workout.id);
       }
     } catch (e) { console.error(e); }
-    setStarting(false);
+    setStarting(null);
   }
 
   async function startFromTemplate(templateId: string) {
-    setStarting(true);
+    setStarting(templateId);
     try {
       const res = await fetch("/api/workouts", {
         method: "POST",
@@ -90,7 +77,7 @@ export default function TrainPage() {
         router.push("/workout/" + workout.id);
       }
     } catch (e) { console.error(e); }
-    setStarting(false);
+    setStarting(null);
   }
 
   async function handleCreateFolder() {
@@ -109,30 +96,40 @@ export default function TrainPage() {
     } catch (e) { console.error(e); }
   }
 
-  async function createTemplate(folderId: string, name: string) {
+  async function handleCreateRoutine(folderId: string) {
+    if (!newRoutineName.trim()) return;
     try {
       const res = await fetch("/api/templates", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ folderId, name }),
+        body: JSON.stringify({ folderId, name: newRoutineName }),
       });
-      if (res.ok) fetchFolders();
+      if (res.ok) {
+        setNewRoutineName("");
+        setShowNewRoutine(null);
+        fetchFolders();
+      }
     } catch (e) { console.error(e); }
   }
 
-  function formatDuration(s: number): string {
-    const h = Math.floor(s / 3600);
-    const m = Math.floor((s % 3600) / 60);
-    if (h > 0) return h + "h " + m + "m";
-    return m + " min";
+  function formatLastPerformed(dateStr: string): string {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    if (diffDays === 0) return "Today";
+    if (diffDays === 1) return "Yesterday";
+    if (diffDays < 7) return diffDays + " days ago";
+    if (diffDays < 30) return Math.floor(diffDays / 7) + "w ago";
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   }
 
   if (loading) {
     return (
       <div className="space-y-3 pb-4">
         <div className="h-12 bg-zinc-900 rounded-xl animate-pulse" />
-        <div className="h-32 bg-zinc-900 rounded-xl animate-pulse" />
-        <div className="h-32 bg-zinc-900 rounded-xl animate-pulse" />
+        <div className="h-40 bg-zinc-900 rounded-xl animate-pulse" />
+        <div className="h-40 bg-zinc-900 rounded-xl animate-pulse" />
       </div>
     );
   }
@@ -141,28 +138,33 @@ export default function TrainPage() {
     <div className="space-y-5 pb-4">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold text-white">Training</h1>
+        <h1 className="text-xl font-bold text-white">Start Workout</h1>
       </div>
 
       {/* Quick Start */}
-      <button
-        onClick={startEmptyWorkout}
-        disabled={starting}
-        className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-4 font-bold text-base transition-colors disabled:opacity-50"
-      >
-        {starting ? "Starting..." : "Start Empty Workout"}
-      </button>
+      <div>
+        <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-2">Quick Start</p>
+        <button
+          onClick={startEmptyWorkout}
+          disabled={starting === "empty"}
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-3.5 font-bold text-sm transition-colors disabled:opacity-50"
+        >
+          {starting === "empty" ? "Starting..." : "Start an Empty Workout"}
+        </button>
+      </div>
 
-      {/* My Routines */}
+      {/* Routines */}
       <div>
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">My Routines</h2>
-          <button
-            onClick={() => setShowNewFolder(true)}
-            className="text-blue-400 text-sm font-medium"
-          >
-            + Folder
-          </button>
+          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">Routines</h2>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setShowNewFolder(true)}
+              className="text-blue-400 text-xs font-medium"
+            >
+              + Folder
+            </button>
+          </div>
         </div>
 
         {/* New Folder Form */}
@@ -177,8 +179,8 @@ export default function TrainPage() {
               autoFocus
               className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-blue-500"
             />
-            <button onClick={handleCreateFolder} className="bg-blue-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Create</button>
-            <button onClick={() => { setShowNewFolder(false); setNewFolderName(""); }} className="text-zinc-400 px-2">✕</button>
+            <button onClick={handleCreateFolder} className="bg-blue-500 text-white rounded-lg px-4 py-2 text-xs font-semibold">Create</button>
+            <button onClick={() => { setShowNewFolder(false); setNewFolderName(""); }} className="text-zinc-400 px-2 text-sm">✕</button>
           </div>
         )}
 
@@ -188,55 +190,81 @@ export default function TrainPage() {
             <p className="text-zinc-600 text-xs mt-1">Create a folder to organize your workout templates</p>
           </div>
         ) : (
-          <div className="space-y-2">
+          <div className="space-y-4">
             {folders.map((folder) => (
-              <div key={folder.id} className="bg-zinc-900 rounded-xl overflow-hidden">
+              <div key={folder.id}>
                 {/* Folder Header */}
-                <button
-                  onClick={() => setExpandedFolder(expandedFolder === folder.id ? null : folder.id)}
-                  className="w-full px-4 py-3 flex items-center justify-between"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-zinc-500 text-sm">{expandedFolder === folder.id ? "▾" : "▸"}</span>
-                    <span className="text-white font-semibold text-sm">{folder.name}</span>
-                    <span className="text-zinc-600 text-xs">({folder.templates.length})</span>
-                  </div>
-                </button>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-white font-semibold text-sm">{folder.name}</h3>
+                  <button
+                    onClick={() => { setShowNewRoutine(folder.id); setNewRoutineName(""); }}
+                    className="text-blue-400 text-xs font-medium"
+                  >
+                    + Routine
+                  </button>
+                </div>
 
-                {/* Expanded Templates */}
-                {expandedFolder === folder.id && (
-                  <div className="border-t border-zinc-800">
-                    {folder.templates.map((template) => (
-                      <div key={template.id} className="border-b border-zinc-800 last:border-b-0">
-                        <div className="px-4 py-3 flex items-center justify-between">
-                          <Link href={"/train/" + template.id} className="flex-1">
-                            <p className="text-white font-medium text-sm">{template.name}</p>
-                            {template.exercises && template.exercises.length > 0 && (
-                              <p className="text-zinc-500 text-xs mt-0.5">
-                                {template.exercises.map(e => e.exercise.name).join(", ")}
+                {/* New Routine Form */}
+                {showNewRoutine === folder.id && (
+                  <div className="bg-zinc-900 rounded-xl p-3 mb-2 flex gap-2">
+                    <input
+                      type="text"
+                      placeholder="Routine name"
+                      value={newRoutineName}
+                      onChange={(e) => setNewRoutineName(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleCreateRoutine(folder.id)}
+                      autoFocus
+                      className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-blue-500"
+                    />
+                    <button onClick={() => handleCreateRoutine(folder.id)} className="bg-blue-500 text-white rounded-lg px-4 py-2 text-xs font-semibold">Create</button>
+                    <button onClick={() => setShowNewRoutine(null)} className="text-zinc-400 px-2 text-sm">✕</button>
+                  </div>
+                )}
+
+                {/* Routine Cards Grid */}
+                {folder.templates.length === 0 ? (
+                  <div className="bg-zinc-900/50 rounded-xl p-4 text-center border border-dashed border-zinc-800">
+                    <p className="text-zinc-600 text-xs">No routines in this folder</p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 gap-2">
+                    {folder.templates.map((template) => {
+                      const exerciseNames = template.exercises?.map(e => e.exercise.name) || [];
+                      const lastWorkout = template.workouts && template.workouts.length > 0
+                        ? template.workouts[0]
+                        : null;
+
+                      return (
+                        <div key={template.id} className="bg-zinc-900 rounded-xl overflow-hidden flex flex-col">
+                          {/* Card Content - tap to edit */}
+                          <Link
+                            href={"/train/" + template.id}
+                            className="p-3 flex-1"
+                          >
+                            <p className="text-white font-semibold text-sm truncate">{template.name}</p>
+                            <p className="text-zinc-500 text-xs mt-1 line-clamp-2 leading-relaxed">
+                              {exerciseNames.length > 0
+                                ? exerciseNames.join(", ")
+                                : "No exercises"}
+                            </p>
+                            {lastWorkout && (
+                              <p className="text-zinc-600 text-[10px] mt-2">
+                                {formatLastPerformed(lastWorkout.date)}
                               </p>
                             )}
                           </Link>
+
+                          {/* Start Button */}
                           <button
                             onClick={() => startFromTemplate(template.id)}
-                            disabled={starting}
-                            className="bg-blue-500/20 text-blue-400 rounded-lg px-3 py-1.5 text-xs font-semibold ml-3 hover:bg-blue-500/30 transition-colors"
+                            disabled={starting === template.id || !template.exercises || template.exercises.length === 0}
+                            className="border-t border-zinc-800 py-2 text-blue-400 text-xs font-semibold hover:bg-zinc-800/50 transition-colors disabled:opacity-30 disabled:text-zinc-600"
                           >
-                            Start
+                            {starting === template.id ? "Starting..." : "Start"}
                           </button>
                         </div>
-                      </div>
-                    ))}
-
-                    <button
-                      onClick={() => {
-                        const name = prompt("Template name:");
-                        if (name) createTemplate(folder.id, name);
-                      }}
-                      className="w-full px-4 py-3 text-blue-400 text-sm font-medium text-left hover:bg-zinc-800/50 transition-colors"
-                    >
-                      + Add Routine
-                    </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>
@@ -244,39 +272,6 @@ export default function TrainPage() {
           </div>
         )}
       </div>
-
-      {/* Recent Workouts */}
-      {recentWorkouts.length > 0 && (
-        <div>
-          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">Recent Workouts</h2>
-          <div className="space-y-2">
-            {recentWorkouts.map((w) => {
-              const uniqueExercises = new Set(w.sets?.map(s => s.exercise?.name || s.exerciseId) || []);
-              return (
-                <Link
-                  key={w.id}
-                  href={"/workout/" + w.id + "/summary"}
-                  className="block bg-zinc-900 rounded-xl p-3 hover:bg-zinc-800/80 transition-colors"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-white font-medium text-sm">
-                        {w.template?.name || "Empty Workout"}
-                      </p>
-                      <p className="text-zinc-500 text-xs mt-0.5">
-                        {new Date(w.date).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}
-                        {w.durationSeconds ? " · " + formatDuration(w.durationSeconds) : ""}
-                        {uniqueExercises.size > 0 ? " · " + uniqueExercises.size + " exercises" : ""}
-                      </p>
-                    </div>
-                    <span className="text-zinc-600 text-sm">›</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
