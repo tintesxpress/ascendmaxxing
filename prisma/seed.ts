@@ -85,6 +85,24 @@ async function main() {
       )
       console.log('Loaded ' + foodsData.length + ' foods from foods.json')
 
+      const validNames = new Set(foodsData.map(f => f.name))
+
+      // Clean up non-custom foods that are not in foods.json (orphan duplicates)
+      const allNonCustomFoods = await prisma.food.findMany({ where: { isCustom: false } })
+      let cleaned = 0
+      for (const food of allNonCustomFoods) {
+        if (!validNames.has(food.name)) {
+          // Check if this food is referenced by any meals before deleting
+          const mealCount = await prisma.meal.count({ where: { foodId: food.id } })
+          if (mealCount === 0) {
+            await prisma.food.delete({ where: { id: food.id } })
+            cleaned++
+            console.log('Removed orphan food: ' + food.name)
+          }
+        }
+      }
+      if (cleaned > 0) console.log('Cleaned up ' + cleaned + ' orphan food entries')
+
       let foodCount = 0
       for (const food of foodsData) {
         try {
