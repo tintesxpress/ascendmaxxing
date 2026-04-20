@@ -13,6 +13,11 @@ export async function GET() {
               include: { exercise: true },
               orderBy: { position: 'asc' },
             },
+            workouts: {
+              orderBy: { date: 'desc' },
+              take: 1,
+              select: { date: true },
+            },
           },
         },
       },
