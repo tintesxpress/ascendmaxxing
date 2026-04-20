@@ -8,7 +8,7 @@
     "fatG": 5.0
   },
   {
-    "name": "Chicken Thigh (cooked, skinless)",
+    "name": "Chicken Thigh (cooked)",
     "servingSizeG": 116,
     "caloriesPerServing": 208,
     "proteinG": 28.8,
@@ -16,7 +16,7 @@
     "fatG": 9.4
   },
   {
-    "name": "Chicken Wings (cooked, with skin)",
+    "name": "Chicken Wings (cooked)",
     "servingSizeG": 90,
     "caloriesPerServing": 200,
     "proteinG": 16.5,
@@ -120,6 +120,14 @@
     "fatG": 10.0
   },
   {
+    "name": "Lamb Chop (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 325,
+    "proteinG": 39.5,
+    "carbsG": 0.0,
+    "fatG": 17.2
+  },
+  {
     "name": "Salmon (cooked)",
     "servingSizeG": 154,
     "caloriesPerServing": 320,
@@ -158,14 +166,6 @@
     "proteinG": 36.2,
     "carbsG": 0.0,
     "fatG": 1.1
-  },
-  {
-    "name": "Lamb Chop (cooked)",
-    "servingSizeG": 140,
-    "caloriesPerServing": 325,
-    "proteinG": 39.5,
-    "carbsG": 0.0,
-    "fatG": 17.2
   },
   {
     "name": "Eggs (large, whole)",
