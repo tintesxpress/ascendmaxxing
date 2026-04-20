@@ -1,115 +1,834 @@
 [
-  {"name":"Chicken Breast (cooked)","servingSizeG":140,"caloriesPerServing":231,"proteinG":43.4,"carbsG":0,"fatG":5},
-  {"name":"Brown Rice (cooked)","servingSizeG":195,"caloriesPerServing":216,"proteinG":5,"carbsG":45,"fatG":1.8},
-  {"name":"White Rice (cooked)","servingSizeG":186,"caloriesPerServing":242,"proteinG":4.4,"carbsG":53.2,"fatG":0.4},
-  {"name":"Eggs (large, whole)","servingSizeG":50,"caloriesPerServing":72,"proteinG":6.3,"carbsG":0.4,"fatG":4.8},
-  {"name":"Egg Whites (large)","servingSizeG":33,"caloriesPerServing":17,"proteinG":3.6,"carbsG":0.2,"fatG":0.1},
-  {"name":"Oatmeal (dry)","servingSizeG":40,"caloriesPerServing":150,"proteinG":5,"carbsG":27,"fatG":2.5},
-  {"name":"Greek Yogurt (nonfat)","servingSizeG":170,"caloriesPerServing":100,"proteinG":17,"carbsG":6,"fatG":0.7},
-  {"name":"Whey Protein Scoop","servingSizeG":31,"caloriesPerServing":120,"proteinG":24,"carbsG":3,"fatG":1},
-  {"name":"Banana","servingSizeG":118,"caloriesPerServing":105,"proteinG":1.3,"carbsG":27,"fatG":0.4},
-  {"name":"Apple","servingSizeG":182,"caloriesPerServing":95,"proteinG":0.5,"carbsG":25,"fatG":0.3},
-  {"name":"Sweet Potato (baked)","servingSizeG":114,"caloriesPerServing":103,"proteinG":2.3,"carbsG":24,"fatG":0.1},
-  {"name":"Broccoli (cooked)","servingSizeG":156,"caloriesPerServing":55,"proteinG":3.7,"carbsG":11.2,"fatG":0.6},
-  {"name":"Salmon (cooked)","servingSizeG":154,"caloriesPerServing":367,"proteinG":34,"carbsG":0,"fatG":22},
-  {"name":"Ground Beef 90/10","servingSizeG":113,"caloriesPerServing":200,"proteinG":22,"carbsG":0,"fatG":11.3},
-  {"name":"Ground Turkey 93/7","servingSizeG":112,"caloriesPerServing":170,"proteinG":21,"carbsG":0,"fatG":9},
-  {"name":"Whole Wheat Bread","servingSizeG":43,"caloriesPerServing":110,"proteinG":4,"carbsG":20,"fatG":1.5},
-  {"name":"Peanut Butter (2 tbsp)","servingSizeG":32,"caloriesPerServing":190,"proteinG":7,"carbsG":7,"fatG":16},
-  {"name":"Almonds (1 oz)","servingSizeG":28,"caloriesPerServing":164,"proteinG":6,"carbsG":6,"fatG":14},
-  {"name":"Avocado (whole)","servingSizeG":200,"caloriesPerServing":322,"proteinG":4,"carbsG":17,"fatG":29},
-  {"name":"Olive Oil (1 tbsp)","servingSizeG":14,"caloriesPerServing":119,"proteinG":0,"carbsG":0,"fatG":13.5},
-  {"name":"Milk (whole)","servingSizeG":244,"caloriesPerServing":149,"proteinG":8,"carbsG":12,"fatG":8},
-  {"name":"Milk (2%)","servingSizeG":244,"caloriesPerServing":122,"proteinG":8,"carbsG":12,"fatG":5},
-  {"name":"Cottage Cheese (low fat)","servingSizeG":113,"caloriesPerServing":81,"proteinG":14,"carbsG":3.2,"fatG":1.2},
-  {"name":"Cheddar Cheese (1 oz)","servingSizeG":28,"caloriesPerServing":113,"proteinG":7,"carbsG":0.4,"fatG":9.3},
-  {"name":"Tuna (canned in water)","servingSizeG":142,"caloriesPerServing":179,"proteinG":39.3,"carbsG":0,"fatG":1.4},
-  {"name":"Shrimp (cooked)","servingSizeG":85,"caloriesPerServing":84,"proteinG":20.4,"carbsG":0.2,"fatG":0.2},
-  {"name":"Pasta (cooked)","servingSizeG":140,"caloriesPerServing":221,"proteinG":8.1,"carbsG":43.2,"fatG":1.3},
-  {"name":"Black Beans (cooked)","servingSizeG":172,"caloriesPerServing":227,"proteinG":15.2,"carbsG":40.8,"fatG":0.9},
-  {"name":"Spinach (raw)","servingSizeG":30,"caloriesPerServing":7,"proteinG":0.9,"carbsG":1.1,"fatG":0.1},
-  {"name":"Tortilla (flour, 8in)","servingSizeG":49,"caloriesPerServing":140,"proteinG":3.6,"carbsG":24,"fatG":3.5},
-  {"name":"Protein Bar (avg)","servingSizeG":60,"caloriesPerServing":210,"proteinG":20,"carbsG":22,"fatG":7},
-  {"name":"Orange","servingSizeG":131,"caloriesPerServing":62,"proteinG":1.2,"carbsG":15.4,"fatG":0.2},
-  {"name":"Blueberries (1 cup)","servingSizeG":148,"caloriesPerServing":84,"proteinG":1.1,"carbsG":21.4,"fatG":0.5},
-  {"name":"Honey (1 tbsp)","servingSizeG":21,"caloriesPerServing":64,"proteinG":0.1,"carbsG":17.3,"fatG":0},
-  {"name":"Butter (1 tbsp)","servingSizeG":14,"caloriesPerServing":102,"proteinG":0.1,"carbsG":0,"fatG":11.5},
-
-  {"name":"Ribeye Steak (cooked)","servingSizeG":170,"caloriesPerServing":466,"proteinG":42,"carbsG":0,"fatG":32},
-  {"name":"NY Strip Steak (cooked)","servingSizeG":170,"caloriesPerServing":390,"proteinG":44,"carbsG":0,"fatG":23},
-  {"name":"Sirloin Steak (cooked)","servingSizeG":170,"caloriesPerServing":316,"proteinG":46,"carbsG":0,"fatG":14},
-  {"name":"Filet Mignon (cooked)","servingSizeG":170,"caloriesPerServing":350,"proteinG":43,"carbsG":0,"fatG":18},
-  {"name":"Flank Steak (cooked)","servingSizeG":170,"caloriesPerServing":280,"proteinG":44,"carbsG":0,"fatG":10},
-  {"name":"Ground Beef 80/20","servingSizeG":113,"caloriesPerServing":287,"proteinG":19.4,"carbsG":0,"fatG":23},
-  {"name":"Chicken Thigh (cooked)","servingSizeG":116,"caloriesPerServing":229,"proteinG":28,"carbsG":0,"fatG":12},
-  {"name":"Chicken Wings (cooked)","servingSizeG":90,"caloriesPerServing":203,"proteinG":19,"carbsG":0,"fatG":13.5},
-  {"name":"Turkey Breast (cooked)","servingSizeG":140,"caloriesPerServing":189,"proteinG":41,"carbsG":0,"fatG":1.4},
-  {"name":"Pork Chop (cooked)","servingSizeG":140,"caloriesPerServing":266,"proteinG":36,"carbsG":0,"fatG":12},
-  {"name":"Pork Tenderloin (cooked)","servingSizeG":140,"caloriesPerServing":206,"proteinG":36,"carbsG":0,"fatG":6},
-  {"name":"Bacon (cooked)","servingSizeG":24,"caloriesPerServing":120,"proteinG":9,"carbsG":0,"fatG":9.4},
-  {"name":"Tilapia (cooked)","servingSizeG":113,"caloriesPerServing":145,"proteinG":30,"carbsG":0,"fatG":2.5},
-  {"name":"Cod (cooked)","servingSizeG":113,"caloriesPerServing":119,"proteinG":26,"carbsG":0,"fatG":1},
-  {"name":"Lamb Chop (cooked)","servingSizeG":140,"caloriesPerServing":340,"proteinG":34,"carbsG":0,"fatG":22},
-
-  {"name":"Jasmine Rice (cooked)","servingSizeG":186,"caloriesPerServing":238,"proteinG":4.4,"carbsG":53,"fatG":0.3},
-  {"name":"Quinoa (cooked)","servingSizeG":185,"caloriesPerServing":222,"proteinG":8.1,"carbsG":39.4,"fatG":3.6},
-  {"name":"Russet Potato (baked)","servingSizeG":173,"caloriesPerServing":168,"proteinG":4.6,"carbsG":37,"fatG":0.2},
-  {"name":"Red Potato (boiled)","servingSizeG":150,"caloriesPerServing":123,"proteinG":3.2,"carbsG":27,"fatG":0.2},
-  {"name":"Corn Tortilla","servingSizeG":26,"caloriesPerServing":52,"proteinG":1.4,"carbsG":10.7,"fatG":0.7},
-  {"name":"Bagel (plain)","servingSizeG":105,"caloriesPerServing":270,"proteinG":10,"carbsG":53,"fatG":1.5},
-  {"name":"White Bread","servingSizeG":30,"caloriesPerServing":79,"proteinG":2.7,"carbsG":15,"fatG":1},
-  {"name":"Cream of Rice (dry)","servingSizeG":42,"caloriesPerServing":150,"proteinG":3,"carbsG":34,"fatG":0},
-  {"name":"Granola (1/2 cup)","servingSizeG":55,"caloriesPerServing":250,"proteinG":6,"carbsG":36,"fatG":10},
-
-  {"name":"Mozzarella Cheese (1 oz)","servingSizeG":28,"caloriesPerServing":85,"proteinG":6.3,"carbsG":0.7,"fatG":6.3},
-  {"name":"Cream Cheese (1 oz)","servingSizeG":28,"caloriesPerServing":99,"proteinG":1.7,"carbsG":1.6,"fatG":9.8},
-  {"name":"Parmesan Cheese (1 oz)","servingSizeG":28,"caloriesPerServing":110,"proteinG":10,"carbsG":0.9,"fatG":7.3},
-  {"name":"Greek Yogurt (full fat)","servingSizeG":170,"caloriesPerServing":150,"proteinG":14,"carbsG":8,"fatG":7},
-  {"name":"Skyr (Icelandic Yogurt)","servingSizeG":150,"caloriesPerServing":110,"proteinG":18,"carbsG":7,"fatG":0.5},
-  {"name":"Milk (skim)","servingSizeG":244,"caloriesPerServing":83,"proteinG":8.3,"carbsG":12.2,"fatG":0.2},
-
-  {"name":"Asparagus (cooked)","servingSizeG":134,"caloriesPerServing":27,"proteinG":3,"carbsG":5,"fatG":0.2},
-  {"name":"Green Beans (cooked)","servingSizeG":125,"caloriesPerServing":35,"proteinG":2,"carbsG":8,"fatG":0.1},
-  {"name":"Mixed Vegetables (frozen, cooked)","servingSizeG":182,"caloriesPerServing":118,"proteinG":5.2,"carbsG":23.8,"fatG":0.5},
-  {"name":"Bell Pepper (raw)","servingSizeG":149,"caloriesPerServing":31,"proteinG":1,"carbsG":6,"fatG":0.3},
-  {"name":"Cucumber (raw)","servingSizeG":150,"caloriesPerServing":23,"proteinG":1,"carbsG":4.5,"fatG":0.2},
-  {"name":"Tomato (raw)","servingSizeG":123,"caloriesPerServing":22,"proteinG":1.1,"carbsG":4.8,"fatG":0.2},
-  {"name":"Lettuce (romaine)","servingSizeG":47,"caloriesPerServing":8,"proteinG":0.6,"carbsG":1.5,"fatG":0.1},
-  {"name":"Kale (raw)","servingSizeG":67,"caloriesPerServing":33,"proteinG":2.9,"carbsG":6,"fatG":0.6},
-  {"name":"Cauliflower (cooked)","servingSizeG":124,"caloriesPerServing":29,"proteinG":2.3,"carbsG":5.1,"fatG":0.6},
-  {"name":"Zucchini (cooked)","servingSizeG":124,"caloriesPerServing":17,"proteinG":1.3,"carbsG":3.1,"fatG":0.4},
-  {"name":"Mushrooms (cooked)","servingSizeG":108,"caloriesPerServing":28,"proteinG":3.4,"carbsG":4,"fatG":0.4},
-  {"name":"Onion (raw)","servingSizeG":110,"caloriesPerServing":44,"proteinG":1.2,"carbsG":10.3,"fatG":0.1},
-  {"name":"Carrots (raw)","servingSizeG":61,"caloriesPerServing":25,"proteinG":0.6,"carbsG":5.8,"fatG":0.1},
-
-  {"name":"Strawberries (1 cup)","servingSizeG":152,"caloriesPerServing":49,"proteinG":1,"carbsG":11.7,"fatG":0.5},
-  {"name":"Grapes (1 cup)","servingSizeG":151,"caloriesPerServing":104,"proteinG":1.1,"carbsG":27.3,"fatG":0.2},
-  {"name":"Mango","servingSizeG":165,"caloriesPerServing":99,"proteinG":1.4,"carbsG":24.7,"fatG":0.6},
-  {"name":"Pineapple (1 cup)","servingSizeG":165,"caloriesPerServing":82,"proteinG":0.9,"carbsG":21.6,"fatG":0.2},
-  {"name":"Watermelon (1 cup)","servingSizeG":152,"caloriesPerServing":46,"proteinG":0.9,"carbsG":11.5,"fatG":0.2},
-  {"name":"Dates (Medjool, 1 pc)","servingSizeG":24,"caloriesPerServing":66,"proteinG":0.4,"carbsG":18,"fatG":0},
-
-  {"name":"Walnuts (1 oz)","servingSizeG":28,"caloriesPerServing":185,"proteinG":4.3,"carbsG":3.9,"fatG":18.5},
-  {"name":"Cashews (1 oz)","servingSizeG":28,"caloriesPerServing":157,"proteinG":5.2,"carbsG":8.6,"fatG":12.4},
-  {"name":"Chia Seeds (1 tbsp)","servingSizeG":12,"caloriesPerServing":58,"proteinG":2,"carbsG":5,"fatG":3.7},
-  {"name":"Flax Seeds (1 tbsp)","servingSizeG":10,"caloriesPerServing":55,"proteinG":1.9,"carbsG":3,"fatG":4.3},
-
-  {"name":"Coconut Oil (1 tbsp)","servingSizeG":14,"caloriesPerServing":121,"proteinG":0,"carbsG":0,"fatG":13.5},
-  {"name":"Sour Cream (2 tbsp)","servingSizeG":30,"caloriesPerServing":60,"proteinG":0.7,"carbsG":1.2,"fatG":5.8},
-  {"name":"Salsa (2 tbsp)","servingSizeG":32,"caloriesPerServing":10,"proteinG":0.3,"carbsG":2,"fatG":0},
-  {"name":"Soy Sauce (1 tbsp)","servingSizeG":16,"caloriesPerServing":9,"proteinG":0.9,"carbsG":1,"fatG":0},
-  {"name":"BBQ Sauce (2 tbsp)","servingSizeG":36,"caloriesPerServing":70,"proteinG":0,"carbsG":17,"fatG":0},
-
-  {"name":"Lentils (cooked)","servingSizeG":198,"caloriesPerServing":230,"proteinG":17.9,"carbsG":39.9,"fatG":0.8},
-  {"name":"Chickpeas (cooked)","servingSizeG":164,"caloriesPerServing":269,"proteinG":14.5,"carbsG":45,"fatG":4.2},
-  {"name":"Kidney Beans (cooked)","servingSizeG":177,"caloriesPerServing":225,"proteinG":15.3,"carbsG":40.4,"fatG":0.9},
-  {"name":"Pinto Beans (cooked)","servingSizeG":171,"caloriesPerServing":245,"proteinG":15.4,"carbsG":44.8,"fatG":1.1},
-  {"name":"Edamame (shelled)","servingSizeG":155,"caloriesPerServing":188,"proteinG":18.5,"carbsG":13.8,"fatG":8.1},
-  {"name":"Tofu (firm)","servingSizeG":126,"caloriesPerServing":88,"proteinG":10,"carbsG":2.2,"fatG":5.3},
-
-  {"name":"Tortilla Chips (1 oz)","servingSizeG":28,"caloriesPerServing":140,"proteinG":2,"carbsG":19,"fatG":7},
-  {"name":"Rice Cakes (plain)","servingSizeG":9,"caloriesPerServing":35,"proteinG":0.7,"carbsG":7.3,"fatG":0.3},
-  {"name":"Casein Protein Scoop","servingSizeG":33,"caloriesPerServing":120,"proteinG":24,"carbsG":3,"fatG":1},
-  {"name":"Creatine Monohydrate (5g)","servingSizeG":5,"caloriesPerServing":0,"proteinG":0,"carbsG":0,"fatG":0},
-  {"name":"Mass Gainer Scoop","servingSizeG":150,"caloriesPerServing":620,"proteinG":32,"carbsG":104,"fatG":8}
+  {
+    "name": "Chicken Breast (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 231,
+    "proteinG": 43.4,
+    "carbsG": 0.0,
+    "fatG": 5.0
+  },
+  {
+    "name": "Chicken Thigh (cooked, skinless)",
+    "servingSizeG": 116,
+    "caloriesPerServing": 208,
+    "proteinG": 28.8,
+    "carbsG": 0.0,
+    "fatG": 9.4
+  },
+  {
+    "name": "Chicken Wings (cooked, with skin)",
+    "servingSizeG": 90,
+    "caloriesPerServing": 200,
+    "proteinG": 16.5,
+    "carbsG": 0.0,
+    "fatG": 14.2
+  },
+  {
+    "name": "Turkey Breast (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 189,
+    "proteinG": 42.1,
+    "carbsG": 0.0,
+    "fatG": 1.0
+  },
+  {
+    "name": "Ground Turkey 93/7",
+    "servingSizeG": 112,
+    "caloriesPerServing": 168,
+    "proteinG": 23.0,
+    "carbsG": 0.0,
+    "fatG": 8.1
+  },
+  {
+    "name": "Ribeye Steak (cooked)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 461,
+    "proteinG": 46.4,
+    "carbsG": 0.0,
+    "fatG": 29.1
+  },
+  {
+    "name": "NY Strip Steak (cooked)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 394,
+    "proteinG": 47.1,
+    "carbsG": 0.0,
+    "fatG": 21.6
+  },
+  {
+    "name": "Sirloin Steak (cooked)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 311,
+    "proteinG": 46.8,
+    "carbsG": 0.0,
+    "fatG": 12.4
+  },
+  {
+    "name": "Filet Mignon (cooked)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 333,
+    "proteinG": 48.3,
+    "carbsG": 0.0,
+    "fatG": 14.4
+  },
+  {
+    "name": "Flank Steak (cooked)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 326,
+    "proteinG": 49.5,
+    "carbsG": 0.0,
+    "fatG": 13.1
+  },
+  {
+    "name": "Ground Beef 90/10",
+    "servingSizeG": 113,
+    "caloriesPerServing": 245,
+    "proteinG": 29.7,
+    "carbsG": 0.0,
+    "fatG": 13.2
+  },
+  {
+    "name": "Ground Beef 80/20",
+    "servingSizeG": 113,
+    "caloriesPerServing": 287,
+    "proteinG": 29.5,
+    "carbsG": 0.0,
+    "fatG": 17.9
+  },
+  {
+    "name": "Pork Chop (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 276,
+    "proteinG": 42.3,
+    "carbsG": 0.0,
+    "fatG": 10.6
+  },
+  {
+    "name": "Pork Tenderloin (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 200,
+    "proteinG": 36.7,
+    "carbsG": 0.0,
+    "fatG": 4.9
+  },
+  {
+    "name": "Bacon (cooked)",
+    "servingSizeG": 24,
+    "caloriesPerServing": 130,
+    "proteinG": 8.9,
+    "carbsG": 0.3,
+    "fatG": 10.0
+  },
+  {
+    "name": "Salmon (cooked)",
+    "servingSizeG": 154,
+    "caloriesPerServing": 320,
+    "proteinG": 31.4,
+    "carbsG": 0.0,
+    "fatG": 20.6
+  },
+  {
+    "name": "Tilapia (cooked)",
+    "servingSizeG": 113,
+    "caloriesPerServing": 145,
+    "proteinG": 29.6,
+    "carbsG": 0.0,
+    "fatG": 3.1
+  },
+  {
+    "name": "Cod (cooked)",
+    "servingSizeG": 113,
+    "caloriesPerServing": 119,
+    "proteinG": 26.0,
+    "carbsG": 0.0,
+    "fatG": 1.0
+  },
+  {
+    "name": "Shrimp (cooked)",
+    "servingSizeG": 85,
+    "caloriesPerServing": 84,
+    "proteinG": 20.4,
+    "carbsG": 0.2,
+    "fatG": 0.3
+  },
+  {
+    "name": "Tuna (canned in water)",
+    "servingSizeG": 142,
+    "caloriesPerServing": 165,
+    "proteinG": 36.2,
+    "carbsG": 0.0,
+    "fatG": 1.1
+  },
+  {
+    "name": "Lamb Chop (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 325,
+    "proteinG": 39.5,
+    "carbsG": 0.0,
+    "fatG": 17.2
+  },
+  {
+    "name": "Eggs (large, whole)",
+    "servingSizeG": 50,
+    "caloriesPerServing": 72,
+    "proteinG": 6.3,
+    "carbsG": 0.3,
+    "fatG": 4.8
+  },
+  {
+    "name": "Egg Whites (large)",
+    "servingSizeG": 33,
+    "caloriesPerServing": 17,
+    "proteinG": 3.6,
+    "carbsG": 0.2,
+    "fatG": 0.1
+  },
+  {
+    "name": "Greek Yogurt (nonfat)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 100,
+    "proteinG": 17.3,
+    "carbsG": 6.1,
+    "fatG": 0.7
+  },
+  {
+    "name": "Greek Yogurt (full fat)",
+    "servingSizeG": 170,
+    "caloriesPerServing": 165,
+    "proteinG": 15.3,
+    "carbsG": 8.0,
+    "fatG": 8.5
+  },
+  {
+    "name": "Skyr (Icelandic Yogurt)",
+    "servingSizeG": 150,
+    "caloriesPerServing": 94,
+    "proteinG": 16.5,
+    "carbsG": 6.0,
+    "fatG": 0.4
+  },
+  {
+    "name": "Milk (whole)",
+    "servingSizeG": 244,
+    "caloriesPerServing": 149,
+    "proteinG": 7.8,
+    "carbsG": 11.7,
+    "fatG": 8.1
+  },
+  {
+    "name": "Milk (2%)",
+    "servingSizeG": 244,
+    "caloriesPerServing": 122,
+    "proteinG": 8.1,
+    "carbsG": 11.7,
+    "fatG": 4.9
+  },
+  {
+    "name": "Milk (skim)",
+    "servingSizeG": 244,
+    "caloriesPerServing": 83,
+    "proteinG": 8.3,
+    "carbsG": 12.2,
+    "fatG": 0.2
+  },
+  {
+    "name": "Cottage Cheese (low fat)",
+    "servingSizeG": 113,
+    "caloriesPerServing": 81,
+    "proteinG": 14.0,
+    "carbsG": 3.1,
+    "fatG": 1.1
+  },
+  {
+    "name": "Cheddar Cheese (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 113,
+    "proteinG": 7.0,
+    "carbsG": 0.4,
+    "fatG": 9.3
+  },
+  {
+    "name": "Mozzarella Cheese (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 84,
+    "proteinG": 6.2,
+    "carbsG": 0.6,
+    "fatG": 6.3
+  },
+  {
+    "name": "Cream Cheese (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 96,
+    "proteinG": 1.7,
+    "carbsG": 1.5,
+    "fatG": 9.6
+  },
+  {
+    "name": "Parmesan Cheese (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 110,
+    "proteinG": 10.0,
+    "carbsG": 0.9,
+    "fatG": 7.2
+  },
+  {
+    "name": "White Rice (cooked)",
+    "servingSizeG": 186,
+    "caloriesPerServing": 242,
+    "proteinG": 5.0,
+    "carbsG": 52.5,
+    "fatG": 0.6
+  },
+  {
+    "name": "Brown Rice (cooked)",
+    "servingSizeG": 195,
+    "caloriesPerServing": 218,
+    "proteinG": 4.5,
+    "carbsG": 46.8,
+    "fatG": 1.6
+  },
+  {
+    "name": "Jasmine Rice (cooked)",
+    "servingSizeG": 186,
+    "caloriesPerServing": 242,
+    "proteinG": 5.0,
+    "carbsG": 52.5,
+    "fatG": 0.6
+  },
+  {
+    "name": "Oatmeal (dry)",
+    "servingSizeG": 40,
+    "caloriesPerServing": 152,
+    "proteinG": 5.3,
+    "carbsG": 27.1,
+    "fatG": 2.6
+  },
+  {
+    "name": "Quinoa (cooked)",
+    "servingSizeG": 185,
+    "caloriesPerServing": 222,
+    "proteinG": 8.1,
+    "carbsG": 39.4,
+    "fatG": 3.5
+  },
+  {
+    "name": "Pasta (cooked)",
+    "servingSizeG": 140,
+    "caloriesPerServing": 221,
+    "proteinG": 8.1,
+    "carbsG": 43.3,
+    "fatG": 1.3
+  },
+  {
+    "name": "Whole Wheat Bread",
+    "servingSizeG": 43,
+    "caloriesPerServing": 108,
+    "proteinG": 5.3,
+    "carbsG": 18.6,
+    "fatG": 1.5
+  },
+  {
+    "name": "White Bread",
+    "servingSizeG": 30,
+    "caloriesPerServing": 80,
+    "proteinG": 2.8,
+    "carbsG": 14.8,
+    "fatG": 1.1
+  },
+  {
+    "name": "Bagel (plain)",
+    "servingSizeG": 105,
+    "caloriesPerServing": 270,
+    "proteinG": 10.5,
+    "carbsG": 53.0,
+    "fatG": 1.7
+  },
+  {
+    "name": "Tortilla (flour, 8in)",
+    "servingSizeG": 49,
+    "caloriesPerServing": 150,
+    "proteinG": 4.0,
+    "carbsG": 24.5,
+    "fatG": 4.1
+  },
+  {
+    "name": "Corn Tortilla",
+    "servingSizeG": 26,
+    "caloriesPerServing": 57,
+    "proteinG": 1.5,
+    "carbsG": 11.6,
+    "fatG": 0.7
+  },
+  {
+    "name": "Cream of Rice (dry)",
+    "servingSizeG": 42,
+    "caloriesPerServing": 150,
+    "proteinG": 2.5,
+    "carbsG": 33.6,
+    "fatG": 0.2
+  },
+  {
+    "name": "Granola (1/2 cup)",
+    "servingSizeG": 55,
+    "caloriesPerServing": 259,
+    "proteinG": 5.7,
+    "carbsG": 35.4,
+    "fatG": 10.9
+  },
+  {
+    "name": "Sweet Potato (baked)",
+    "servingSizeG": 114,
+    "caloriesPerServing": 103,
+    "proteinG": 2.3,
+    "carbsG": 23.6,
+    "fatG": 0.1
+  },
+  {
+    "name": "Russet Potato (baked)",
+    "servingSizeG": 173,
+    "caloriesPerServing": 168,
+    "proteinG": 4.5,
+    "carbsG": 37.0,
+    "fatG": 0.2
+  },
+  {
+    "name": "Red Potato (boiled)",
+    "servingSizeG": 150,
+    "caloriesPerServing": 123,
+    "proteinG": 3.0,
+    "carbsG": 27.5,
+    "fatG": 0.2
+  },
+  {
+    "name": "Black Beans (cooked)",
+    "servingSizeG": 172,
+    "caloriesPerServing": 227,
+    "proteinG": 15.3,
+    "carbsG": 40.8,
+    "fatG": 0.9
+  },
+  {
+    "name": "Lentils (cooked)",
+    "servingSizeG": 198,
+    "caloriesPerServing": 230,
+    "proteinG": 17.8,
+    "carbsG": 39.8,
+    "fatG": 0.8
+  },
+  {
+    "name": "Chickpeas (cooked)",
+    "servingSizeG": 164,
+    "caloriesPerServing": 269,
+    "proteinG": 14.6,
+    "carbsG": 44.9,
+    "fatG": 4.3
+  },
+  {
+    "name": "Kidney Beans (cooked)",
+    "servingSizeG": 177,
+    "caloriesPerServing": 225,
+    "proteinG": 15.4,
+    "carbsG": 40.4,
+    "fatG": 0.9
+  },
+  {
+    "name": "Pinto Beans (cooked)",
+    "servingSizeG": 171,
+    "caloriesPerServing": 245,
+    "proteinG": 15.4,
+    "carbsG": 44.8,
+    "fatG": 1.0
+  },
+  {
+    "name": "Edamame (shelled)",
+    "servingSizeG": 155,
+    "caloriesPerServing": 188,
+    "proteinG": 18.4,
+    "carbsG": 13.8,
+    "fatG": 8.1
+  },
+  {
+    "name": "Tofu (firm)",
+    "servingSizeG": 126,
+    "caloriesPerServing": 96,
+    "proteinG": 10.3,
+    "carbsG": 2.4,
+    "fatG": 6.0
+  },
+  {
+    "name": "Broccoli (cooked)",
+    "servingSizeG": 156,
+    "caloriesPerServing": 55,
+    "proteinG": 3.7,
+    "carbsG": 11.2,
+    "fatG": 0.6
+  },
+  {
+    "name": "Spinach (raw)",
+    "servingSizeG": 30,
+    "caloriesPerServing": 7,
+    "proteinG": 0.9,
+    "carbsG": 1.1,
+    "fatG": 0.1
+  },
+  {
+    "name": "Asparagus (cooked)",
+    "servingSizeG": 134,
+    "caloriesPerServing": 29,
+    "proteinG": 3.2,
+    "carbsG": 5.5,
+    "fatG": 0.3
+  },
+  {
+    "name": "Green Beans (cooked)",
+    "servingSizeG": 125,
+    "caloriesPerServing": 44,
+    "proteinG": 2.4,
+    "carbsG": 9.9,
+    "fatG": 0.1
+  },
+  {
+    "name": "Mixed Vegetables (frozen, cooked)",
+    "servingSizeG": 182,
+    "caloriesPerServing": 118,
+    "proteinG": 5.3,
+    "carbsG": 23.8,
+    "fatG": 0.5
+  },
+  {
+    "name": "Bell Pepper (raw)",
+    "servingSizeG": 149,
+    "caloriesPerServing": 30,
+    "proteinG": 1.3,
+    "carbsG": 6.9,
+    "fatG": 0.3
+  },
+  {
+    "name": "Cucumber (raw)",
+    "servingSizeG": 150,
+    "caloriesPerServing": 22,
+    "proteinG": 1.0,
+    "carbsG": 5.4,
+    "fatG": 0.2
+  },
+  {
+    "name": "Tomato (raw)",
+    "servingSizeG": 123,
+    "caloriesPerServing": 22,
+    "proteinG": 1.1,
+    "carbsG": 4.8,
+    "fatG": 0.2
+  },
+  {
+    "name": "Lettuce (romaine)",
+    "servingSizeG": 47,
+    "caloriesPerServing": 8,
+    "proteinG": 0.6,
+    "carbsG": 1.6,
+    "fatG": 0.1
+  },
+  {
+    "name": "Kale (raw)",
+    "servingSizeG": 67,
+    "caloriesPerServing": 33,
+    "proteinG": 2.9,
+    "carbsG": 5.9,
+    "fatG": 0.6
+  },
+  {
+    "name": "Cauliflower (cooked)",
+    "servingSizeG": 124,
+    "caloriesPerServing": 29,
+    "proteinG": 2.2,
+    "carbsG": 5.1,
+    "fatG": 0.6
+  },
+  {
+    "name": "Zucchini (cooked)",
+    "servingSizeG": 124,
+    "caloriesPerServing": 17,
+    "proteinG": 1.4,
+    "carbsG": 3.3,
+    "fatG": 0.5
+  },
+  {
+    "name": "Mushrooms (cooked)",
+    "servingSizeG": 108,
+    "caloriesPerServing": 30,
+    "proteinG": 3.9,
+    "carbsG": 3.9,
+    "fatG": 0.4
+  },
+  {
+    "name": "Onion (raw)",
+    "servingSizeG": 110,
+    "caloriesPerServing": 44,
+    "proteinG": 1.2,
+    "carbsG": 10.2,
+    "fatG": 0.1
+  },
+  {
+    "name": "Carrots (raw)",
+    "servingSizeG": 61,
+    "caloriesPerServing": 25,
+    "proteinG": 0.5,
+    "carbsG": 5.9,
+    "fatG": 0.1
+  },
+  {
+    "name": "Banana",
+    "servingSizeG": 118,
+    "caloriesPerServing": 105,
+    "proteinG": 1.3,
+    "carbsG": 26.9,
+    "fatG": 0.4
+  },
+  {
+    "name": "Apple",
+    "servingSizeG": 182,
+    "caloriesPerServing": 95,
+    "proteinG": 0.5,
+    "carbsG": 25.1,
+    "fatG": 0.4
+  },
+  {
+    "name": "Orange",
+    "servingSizeG": 131,
+    "caloriesPerServing": 62,
+    "proteinG": 1.2,
+    "carbsG": 15.5,
+    "fatG": 0.1
+  },
+  {
+    "name": "Blueberries (1 cup)",
+    "servingSizeG": 148,
+    "caloriesPerServing": 84,
+    "proteinG": 1.0,
+    "carbsG": 21.5,
+    "fatG": 0.4
+  },
+  {
+    "name": "Strawberries (1 cup)",
+    "servingSizeG": 152,
+    "caloriesPerServing": 49,
+    "proteinG": 1.1,
+    "carbsG": 11.7,
+    "fatG": 0.5
+  },
+  {
+    "name": "Grapes (1 cup)",
+    "servingSizeG": 151,
+    "caloriesPerServing": 104,
+    "proteinG": 1.1,
+    "carbsG": 27.3,
+    "fatG": 0.3
+  },
+  {
+    "name": "Mango",
+    "servingSizeG": 165,
+    "caloriesPerServing": 99,
+    "proteinG": 1.3,
+    "carbsG": 24.8,
+    "fatG": 0.7
+  },
+  {
+    "name": "Pineapple (1 cup)",
+    "servingSizeG": 165,
+    "caloriesPerServing": 82,
+    "proteinG": 0.8,
+    "carbsG": 21.6,
+    "fatG": 0.2
+  },
+  {
+    "name": "Watermelon (1 cup)",
+    "servingSizeG": 152,
+    "caloriesPerServing": 46,
+    "proteinG": 0.9,
+    "carbsG": 11.6,
+    "fatG": 0.3
+  },
+  {
+    "name": "Dates (Medjool, 1 pc)",
+    "servingSizeG": 24,
+    "caloriesPerServing": 66,
+    "proteinG": 0.4,
+    "carbsG": 18.0,
+    "fatG": 0.0
+  },
+  {
+    "name": "Almonds (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 162,
+    "proteinG": 5.9,
+    "carbsG": 6.1,
+    "fatG": 14.0
+  },
+  {
+    "name": "Walnuts (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 183,
+    "proteinG": 4.3,
+    "carbsG": 3.8,
+    "fatG": 18.3
+  },
+  {
+    "name": "Cashews (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 155,
+    "proteinG": 5.1,
+    "carbsG": 8.5,
+    "fatG": 12.3
+  },
+  {
+    "name": "Peanut Butter (2 tbsp)",
+    "servingSizeG": 32,
+    "caloriesPerServing": 188,
+    "proteinG": 8.0,
+    "carbsG": 6.3,
+    "fatG": 16.1
+  },
+  {
+    "name": "Chia Seeds (1 tbsp)",
+    "servingSizeG": 12,
+    "caloriesPerServing": 58,
+    "proteinG": 2.0,
+    "carbsG": 5.1,
+    "fatG": 3.7
+  },
+  {
+    "name": "Flax Seeds (1 tbsp)",
+    "servingSizeG": 10,
+    "caloriesPerServing": 53,
+    "proteinG": 1.8,
+    "carbsG": 2.9,
+    "fatG": 4.2
+  },
+  {
+    "name": "Olive Oil (1 tbsp)",
+    "servingSizeG": 14,
+    "caloriesPerServing": 124,
+    "proteinG": 0.0,
+    "carbsG": 0.0,
+    "fatG": 14.0
+  },
+  {
+    "name": "Coconut Oil (1 tbsp)",
+    "servingSizeG": 14,
+    "caloriesPerServing": 121,
+    "proteinG": 0.0,
+    "carbsG": 0.0,
+    "fatG": 13.9
+  },
+  {
+    "name": "Butter (1 tbsp)",
+    "servingSizeG": 14,
+    "caloriesPerServing": 100,
+    "proteinG": 0.1,
+    "carbsG": 0.0,
+    "fatG": 11.4
+  },
+  {
+    "name": "Avocado (whole)",
+    "servingSizeG": 200,
+    "caloriesPerServing": 320,
+    "proteinG": 4.0,
+    "carbsG": 17.0,
+    "fatG": 29.4
+  },
+  {
+    "name": "Sour Cream (2 tbsp)",
+    "servingSizeG": 30,
+    "caloriesPerServing": 58,
+    "proteinG": 0.7,
+    "carbsG": 1.4,
+    "fatG": 5.8
+  },
+  {
+    "name": "Salsa (2 tbsp)",
+    "servingSizeG": 32,
+    "caloriesPerServing": 9,
+    "proteinG": 0.3,
+    "carbsG": 2.0,
+    "fatG": 0.0
+  },
+  {
+    "name": "Soy Sauce (1 tbsp)",
+    "servingSizeG": 16,
+    "caloriesPerServing": 8,
+    "proteinG": 0.9,
+    "carbsG": 1.1,
+    "fatG": 0.0
+  },
+  {
+    "name": "BBQ Sauce (2 tbsp)",
+    "servingSizeG": 36,
+    "caloriesPerServing": 62,
+    "proteinG": 0.3,
+    "carbsG": 14.7,
+    "fatG": 0.2
+  },
+  {
+    "name": "Honey (1 tbsp)",
+    "servingSizeG": 21,
+    "caloriesPerServing": 64,
+    "proteinG": 0.1,
+    "carbsG": 17.3,
+    "fatG": 0.0
+  },
+  {
+    "name": "Whey Protein Scoop",
+    "servingSizeG": 31,
+    "caloriesPerServing": 120,
+    "proteinG": 24.0,
+    "carbsG": 3.0,
+    "fatG": 1.0
+  },
+  {
+    "name": "Casein Protein Scoop",
+    "servingSizeG": 33,
+    "caloriesPerServing": 120,
+    "proteinG": 24.0,
+    "carbsG": 3.0,
+    "fatG": 1.0
+  },
+  {
+    "name": "Protein Bar (avg)",
+    "servingSizeG": 60,
+    "caloriesPerServing": 210,
+    "proteinG": 20.0,
+    "carbsG": 22.0,
+    "fatG": 7.0
+  },
+  {
+    "name": "Creatine Monohydrate (5g)",
+    "servingSizeG": 5,
+    "caloriesPerServing": 0,
+    "proteinG": 0.0,
+    "carbsG": 0.0,
+    "fatG": 0.0
+  },
+  {
+    "name": "Mass Gainer Scoop",
+    "servingSizeG": 150,
+    "caloriesPerServing": 620,
+    "proteinG": 32.0,
+    "carbsG": 103.9,
+    "fatG": 7.9
+  },
+  {
+    "name": "Tortilla Chips (1 oz)",
+    "servingSizeG": 28,
+    "caloriesPerServing": 137,
+    "proteinG": 2.1,
+    "carbsG": 17.9,
+    "fatG": 6.6
+  },
+  {
+    "name": "Rice Cakes (plain)",
+    "servingSizeG": 9,
+    "caloriesPerServing": 35,
+    "proteinG": 0.7,
+    "carbsG": 7.3,
+    "fatG": 0.3
+  }
 ]
